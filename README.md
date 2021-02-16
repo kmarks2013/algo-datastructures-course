@@ -33,18 +33,42 @@
     Suppose we want to write a funciton taht calculates the sum of all numbers from 1 up to (and including) some number n.
     (index.js - ln 1 - 14 )
 
-``` const addUpTo = (n) => {
-// simplest solution a cumulator
-let total = 0
-for (let i = 0; i <= n; i++){
-    total += i
-}
-console.log(total)
-}
+    ``` 
+    const addUpTo = (n) => {
+    // simplest solution a cumulator
+    let total = 0
+    for (let i = 0; i <= n; i++){
+        total += i
+    }
+    console.log(total)
+    }
 
-addUpTo(3)
+    addUpTo(3)
 
-const addUpToTwo = (n) =>{
-retrun n* (n + 1)/2
-}
-```
+    const addUpToTwo = (n) =>{
+    retrun n* (n + 1)/2
+    }
+    ```
+
+    What doees beter mean?
+    - ist it faster?
+    - does it take less memory?
+    - is it esaier to read?
+
+    Right now  we are going to focus on faster and less memory intensive - this also casues a little bit of a sacrifcie for readability.
+
+    How will we evaluate Speed?
+    by using built in timer functions ex:
+    ```
+    let t1 = preformance.now()
+    addUpTo(10000000)
+    let t2 = prefomrance.now()
+    console.log(`Time Elapsed: ${(t2-t1) / 1000} seconds.`)
+    ```
+
+    This process isnt very reilable as we have to add track this ourselves.
+    
+    The problem with time:
+    - Different machines will record different times
+    - The same machine will record different times
+    - For fast algorithims speed measurements may not be precise enough.
