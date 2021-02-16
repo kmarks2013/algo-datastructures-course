@@ -31,4 +31,20 @@
     
     - An Example:
     Suppose we want to write a funciton taht calculates the sum of all numbers from 1 up to (and including) some number n.
-    (index.js - ln 1 - )
+    (index.js - ln 1 - 14 )
+
+``` const addUpTo = (n) => {
+// simplest solution a cumulator
+let total = 0
+for (let i = 0; i <= n; i++){
+    total += i
+}
+console.log(total)
+}
+
+addUpTo(3)
+
+const addUpToTwo = (n) =>{
+retrun n* (n + 1)/2
+}
+```
